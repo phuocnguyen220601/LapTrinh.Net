@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF1DB95A-ED1D-43C6-BBBF-2913CCF28A44}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QL_THUVIEN_LTNET</RootNamespace>
+    <AssemblyName>QL_THUVIEN_LTNET</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACCOUNT.cs" />
+    <Compile Include="connect_report.cs" />
+    <Compile Include="DocGia.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_docgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_docgia.Designer.cs">
+      <DependentUpon>frm_docgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Excel.Designer.cs">
+      <DependentUpon>frm_Excel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NCC.Designer.cs">
+      <DependentUpon>frm_NCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nhanvien.Designer.cs">
+      <DependentUpon>frm_nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NXB.Designer.cs">
+      <DependentUpon>frm_NXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_phieumuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_phieumuon.Designer.cs">
+      <DependentUpon>frm_phieumuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_phieumuonuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_phieumuonuser.Designer.cs">
+      <DependentUpon>frm_phieumuonuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PhieuNhap.Designer.cs">
+      <DependentUpon>frm_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_qlsach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_qlsach.Designer.cs">
+      <DependentUpon>frm_qlsach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_qltacgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_qltacgia.Designer.cs">
+      <DependentUpon>frm_qltacgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sachuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sachuser.Designer.cs">
+      <DependentUpon>frm_sachuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tguser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tguser.Designer.cs">
+      <DependentUpon>frm_tguser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_thongkephieunhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_thongkephieunhap.Designer.cs">
+      <DependentUpon>frm_thongkephieunhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_thongketaccgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_thongketaccgia.Designer.cs">
+      <DependentUpon>frm_thongketaccgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_thongkesach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_thongkesach.Designer.cs">
+      <DependentUpon>frm_thongkesach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_timdocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_timdocgia.Designer.cs">
+      <DependentUpon>frm_timdocgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_timsach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_timsach.Designer.cs">
+      <DependentUpon>frm_timsach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_user.Designer.cs">
+      <DependentUpon>frm_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ketnoi.cs" />
+    <Compile Include="NCC.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="NXB.cs" />
+    <Compile Include="PhieuMuon.cs" />
+    <Compile Include="PhieuNhap.cs" />
+    <Compile Include="PhieuNhap_report.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sach.cs" />
+    <Compile Include="sach_report.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="sysdiagram.cs" />
+    <Compile Include="TacGia.cs" />
+    <Compile Include="TacGiaReport.cs" />
+    <Compile Include="TacGia_connect.cs" />
+    <Compile Include="Word.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Word.Designer.cs">
+      <DependentUpon>Word.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_Excel.resx">
+      <DependentUpon>frm_Excel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_thongkephieunhap.resx">
+      <DependentUpon>frm_thongkephieunhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_phieunhap.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_sach.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taccgia_report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_docgia.resx">
+      <DependentUpon>frm_docgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NCC.resx">
+      <DependentUpon>frm_NCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nhanvien.resx">
+      <DependentUpon>frm_nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NXB.resx">
+      <DependentUpon>frm_NXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_phieumuon.resx">
+      <DependentUpon>frm_phieumuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_phieumuonuser.resx">
+      <DependentUpon>frm_phieumuonuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PhieuNhap.resx">
+      <DependentUpon>frm_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_qlsach.resx">
+      <DependentUpon>frm_qlsach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_qltacgia.resx">
+      <DependentUpon>frm_qltacgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sachuser.resx">
+      <DependentUpon>frm_sachuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tguser.resx">
+      <DependentUpon>frm_tguser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_thongketaccgia.resx">
+      <DependentUpon>frm_thongketaccgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_thongkesach.resx">
+      <DependentUpon>frm_thongkesach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_timdocgia.resx">
+      <DependentUpon>frm_timdocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_timsach.resx">
+      <DependentUpon>frm_timsach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_user.resx">
+      <DependentUpon>frm_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Word.resx">
+      <DependentUpon>Word.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\PhieuNhap_report.datasource" />
+    <None Include="Properties\DataSources\sach_report.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh-anh-thu-vien-dep-den-ngo-ngang-tren-the-gioi_104919815.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anh-nen-ronaldo-cr7-dep-1536x864.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Microsoft\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+</Project>
